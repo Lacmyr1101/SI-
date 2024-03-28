@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGRYPP</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="almacen">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box">
+                <div class="search">
+                    <input type="text" placeholder="Buscar" class="search-input">
+                    <button class="search-btn">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+
+                <div class="material-container">
+                    <div class="material-card">
+                        <div class="material-card-imgBx">
+                            <img src="IMG/Materiales/carbon.jpg">
+                        </div>
+                        <div class="material-card-info">
+                            <h2 class="titulo">CARBON</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis velit itaque amet, nisi
+                                rerum
+                                officiis expedita animi aspernatur voluptatum blanditiis quo veritatis, quia praesentium
+                                iste atque dolor eligendi, consequatur consequuntur.</p>
+                        </div>
+                        <div class="material-card-total">
+                            <span class="sub">TOTAL</span>
+                            <span class="num">1000</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="botones">
+                    <button class="new" onclick="newMaterialMenuOpen()">Material Nuevo</button>
+                    <button class="add" onclick="modificarCantidadMenuOpen()">Agregar</button>
+                    <button class="del">Eliminar</button>
+
+                </div>
+            </div>
+
+            <div id="newM">
+                <h2>Material Nuevo</h2>
+                <div class="form">
+                    <div class="textbox">
+                        <input type="text" placeholder="Nombre del Material" id="nMaterial" required>
+                        <textarea name="" id="dMaterial" cols="30" rows="10"
+                            placeholder="Descripcion del Material (Opcional)"></textarea>
+                    </div>
+                    <div class="elsebox">
+                        <div class="cantidad">
+                            <span>Cantidad: </span>
+                            <input type="number" id="numMaterial" required>
+                        </div>
+                        <div class="imgarrastrada">
+                            <span>foto (opcional)</span>
+                            <input type="file" id="archivo">
+                            <img src="" id="preview">
+                        </div>
+
+                    </div>
+                    <button type="submit" id="bnew" onclick="capturarNuevoMaterial()">Agregar</button>
+                </div>
+
+            </div>
+
+            <div id="addM" class="">
+                <h2>Modificar Cantidad</h2>
+                <div class="elementos">
+                    <span>Seleccione el material</span>
+                    <div class="lista-content">
+                        <ul id="material-list"></ul>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="cantidad">
+                        <span>Cantidad: </span>
+                        <input type="number" id="numMaterialLec" readonly>
+                    </div>
+                    <div class="acciones">
+                        <button id="btnsuma">+</button>
+                        <input type="number" id="addles">
+                        <button id="btnresta">-</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section class="fabrica"></section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
